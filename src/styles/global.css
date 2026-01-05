@@ -1,16 +1,43 @@
+:root {
+  /* Palet Warna Alam (Forest & Earth) */
+  --primary: #2d6a4f;      /* Hijau Hutan */
+  --primary-dark: #1b4332; /* Hijau Gelap */
+  --secondary: #d8f3dc;    /* Hijau Mint Pucat */
+  --accent: #d4a373;       /* Warna Kayu/Tanah */
+  --bg: #f7f9f8;           /* Putih Tulang */
+  --text: #1f2937;
+  --white: #ffffff;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth; /* INI KUNCINYA AGAR SCROLL HALUS */
+  scroll-padding-top: 100px; /* Jarak agar judul tidak tertutup navbar saat discroll */
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background-color: #f5f7fa;
-  color: #222;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-img {
-  max-width: 100%;
-  display: block;
+/* Container agar rapi di tengah */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Grid System Responsif */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
 }
