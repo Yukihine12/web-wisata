@@ -1,0 +1,61 @@
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+.section h2 {
+  margin-bottom: 16px;
+}
+
+.card-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.grid-placeholder {
+  height: 200px;
+  background: #eee;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.page-hero.small {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-hero.small h1 {
+  color: white;
+  font-size: 28px;
+}

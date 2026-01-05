@@ -1,0 +1,43 @@
+.main-header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-item {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-icon {
+  font-size: 22px;
+  display: block;
+  margin: auto;
+}
+
+.nav-item span {
+  font-size: 13px;
+}
+
+.nav-item.active {
+  background: white;
+  color: black;
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.active-icon {
+  color: #0aa;
+}

@@ -1,0 +1,101 @@
+/* ===== VILLA CARD ===== */
+.villa-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  transition: transform .3s;
+}
+
+.villa-card:hover {
+  transform: translateY(-6px);
+}
+
+.villa-card img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.villa-content {
+  padding: 14px;
+  position: relative;
+}
+
+.villa-badge {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  background: #ff5a00;
+  color: white;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+}
+
+.location {
+  font-size: 12px;
+  color: #666;
+  margin: 6px 0;
+}
+
+.villa-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  font-size: 13px;
+  color: #ffb703;
+}
+
+.price {
+  font-weight: bold;
+  color: #0aa;
+}
+
+.price span {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* ===== JEEP CARD ===== */
+.jeep-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.jeep-card img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.jeep-content {
+  padding: 14px;
+}
+
+.capacity {
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.features li {
+  margin-bottom: 4px;
+}
+
+.jeep-price {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff5a00;
+}
