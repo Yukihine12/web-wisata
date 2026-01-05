@@ -1,0 +1,209 @@
+/* src/styles/main.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+:root {
+  /* TEMA ALAM (Nature Palette) */
+  --color-primary: #2d6a4f;    /* Hijau Hutan */
+  --color-secondary: #d8f3dc;  /* Hijau Muda (Mint) */
+  --color-accent: #d4a373;     /* Warna Kayu */
+  --color-bg: #f8f9fa;         /* Putih Tulang */
+  --color-text: #1f2937;       /* Abu Gelap */
+  --radius: 12px;
+  --container-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Scroll Halus */
+  scroll-padding-top: 100px; /* Agar judul tidak ketutup navbar */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Pastikan angka ini tinggi agar selalu di atas */
+  
+  /* --- PERBAIKAN DI SINI --- */
+  background: #ffffff; /* Ubah jadi putih solid (Hex Code) */
+  /* Hapus backdrop-filter jika tidak ingin efek kaca */
+  
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Tambah bayangan agar batasnya tegas */
+  padding: 15px 0;
+  width: 100%; /* Pastikan lebar penuh */
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Tambahkan padding container jika perlu agar tidak mepet pinggir */
+  padding: 0 20px; 
+  max-width: 1200px; /* Sesuaikan dengan layout kamu */
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+/* --- HERO --- */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1469474968028-56623f02e42e');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; opacity: 0.9; }
+
+/* --- SECTIONS --- */
+.section-wrapper {
+  margin-bottom: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* --- GRID SYSTEM (Responsive) --- */
+.grid {
+  display: grid;
+  /* Min 300px agar kartu tidak gepeng/sempit */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* --- CARD (Universal) --- */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image-container {
+  width: 100%;
+  aspect-ratio: 4/3; /* KUNCI: Agar gambar proporsional (Persegi Panjang Standar) */
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mengisi area tanpa gepeng */
+  transition: transform 0.5s;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+  color: var(--color-text);
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+}
+
+.price {
+  color: var(--color-primary);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.btn-card {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}

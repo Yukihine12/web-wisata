@@ -1,24 +1,21 @@
-import Header from "../components/Header";
-import VillaCard from "../components/VillaCard";
-import { villas } from "../data/villas";
-import "../styles/home.css";
+import "../styles/card.css"; // Import css kartu yang baru
 
-export default function Villas() {
+export default function VillaCard({ data }) {
   return (
-    <>
-      <Header />
-
-      <section className="page-hero small">
-        <h1>Sewa Villa</h1>
-      </section>
-
-      <section className="section">
-        <div className="grid">
-          {villas.map(villa => (
-            <VillaCard key={villa.id} data={villa} />
-          ))}
+    <div className="card"> {/* Gunakan class 'card' */}
+      <div className="card-img-wrapper">
+        <img src={data.image} alt={data.name} className="card-img" />
+      </div>
+      
+      <div className="card-content">
+        <h3 className="card-title">{data.name}</h3>
+        <p className="card-info">📍 {data.location} • ⭐ {data.rating}</p>
+        
+        <div className="card-footer">
+          <span className="price">{data.price} <small>/malam</small></span>
+          <button className="btn-detail">Lihat Detail</button>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

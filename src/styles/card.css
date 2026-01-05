@@ -1,0 +1,19 @@
+/* global.css */
+
+.grid {
+  display: grid;
+  /* Ubah minmax dari 280px menjadi 320px agar kartu lebih lebar */
+  /* Ini membuat gambar punya ruang lebih luas secara horizontal */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 32px; /* Jarak antar kartu lebih lega */
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+
+/* Khusus layar HP agar tidak kepotong */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 Kolom penuh di HP */
+    padding: 0 10px;
+  }
+}
