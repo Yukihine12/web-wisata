@@ -3,22 +3,23 @@ import './App.css'; // Panggil CSS yang tadi dibuat
 
 // --- DATA KITA TARUH DISINI SAJA ---
 const destinations = [
-  { id: 1, name: "Gunung Bromo", price: "Rp 350.000", image: "https://images.unsplash.com/photo-1588668214407-6ea9e6d8c27c" },
-  { id: 2, name: "Kawah Ijen", price: "Rp 250.000", image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb" },
-  { id: 3, name: "Ranu Kumbolo", price: "Rp 400.000", image: "https://images.unsplash.com/photo-1605537964076-3f0d22c15d45" }
+  { id: 1, name: "Lava Tour Guntur", price: "Rp 350.000", rating: 4.8, image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb" },
+  { id: 2, name: "Hutan Pinus Cirorek", price: "Rp 250.000", rating: 4.5, image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e" },
+  { id: 3, name: "Curug Cihanyawar", price: "Rp 400.000", rating: 4.7, image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9" },
+  { id: 4, name: "Situ Cibereum", price: "Rp 400.000", rating: 4.6, image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" },
+  { id: 5, name: "Gunung Cikuray", price: "Rp 400.000", rating: 4.9, image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" }
 ];
 
 const villas = [
-  { id: 1, name: "Villa Pinus", price: "Rp 1.500.000", image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b91d" },
-  { id: 2, name: "Villa Danau", price: "Rp 2.000.000", image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233" },
-  { id: 3, name: "Cottage Kayu", price: "Rp 850.000", image: "https://images.unsplash.com/photo-1542718610-a1d656d1884c" }
+  { id: 1, name: "Villa Pinus", price: "Rp 1.5jt", rating: 5.0, image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b91d" },
+  { id: 2, name: "Villa Danau", price: "Rp 2.0jt", rating: 4.8, image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233" },
+  { id: 3, name: "Cottage Kayu", price: "Rp 850rb", rating: 4.7, image: "https://images.unsplash.com/photo-1542718610-a1d656d1884c" }
 ];
 
 const jeeps = [
-  { id: 1, name: "Jeep Hardtop", price: "Rp 600.000", image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf" },
-  { id: 2, name: "Jeep Rubicon", price: "Rp 1.200.000", image: "https://images.unsplash.com/photo-1519245659620-e859806a8d3b" }
+  { id: 1, name: "Jeep Hardtop", price: "Rp 600rb", rating: 4.9, image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf" },
+  { id: 2, name: "Jeep Rubicon", price: "Rp 1.2jt", rating: 5.0, image: "https://images.unsplash.com/photo-1519245659620-e859806a8d3b" }
 ];
-
 // --- KOMPONEN UTAMA ---
 export default function App() {
  
