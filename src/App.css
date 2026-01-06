@@ -41,12 +41,12 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
   top: 0;
   z-index: 100;
   width: 100%;
-  background: #fff;
+  background: #f4f1f1;
   display: flex;
   justify-content: center;
-  margin-top: -30px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sedikit bayangan di nav */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
 }
 
 .nav-content {
@@ -55,10 +55,11 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
   padding: 12px 16px;
   display: flex;
   justify-content: center;  
+ 
 }
 
 .nav-links {
-  background: #ffffff;
+  background: #4C763B;
   padding: 10px 30px;
   border-radius: 50px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -81,13 +82,18 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
 .container { 
   max-width: 1200px; 
   margin: 0 auto; 
-  padding: 0 16px 80px 16px; 
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 30px !important;
+  background-color: #B0CE88;
 }
 
 .section-title { 
   text-align: center; 
-  margin: 50px 0 30px 0; 
-  color: var(--primary); 
+  margin: 0px 0 0px 0; 
+  color: var(--primary);
+  padding-top: 10px; 
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -97,6 +103,7 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
+ 
 }
 
 /* --- CARD STYLE --- */
@@ -163,7 +170,7 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
 }
 
 .btn { 
-  background: var(--primary); 
+  background:#1ebc57; 
   color: white; 
   padding: 8px 16px; 
   border-radius: 8px; 
@@ -173,7 +180,10 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
   transition: background 0.2s;
 }
 
-.btn:hover { background: var(--secondary); }
+.btn:hover { 
+  background: #B0CE88; 
+ color: #1f2937; 
+}
 
 /* --- MODAL POPUP (Formulir) --- */
 .modal-overlay {
