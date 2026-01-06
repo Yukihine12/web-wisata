@@ -42,9 +42,9 @@ export default function App() {
     e.preventDefault(); 
     
     // GANTI NOMOR WA DISINI
-    const nomorWA = "628123456789"; 
+    const nomorWA = "6281214424344"; 
 
-    const pesan = `Halo Admin, saya ingin booking wisata.%0A%0A` +
+    const pesan = `Halo Admin, saya ingin booking.%0A%0A` +
                   `Nama: ${formData.nama}%0A` +
                   `Destinasi: ${formData.destinasi}%0A` +
                   `Tanggal: ${formData.tanggal}%0A` +
