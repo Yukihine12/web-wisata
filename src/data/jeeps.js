@@ -1,7 +1,7 @@
 export const jeeps = [
   {
     id: 1,
-    name: "Jeep Sunrise Bromo",
+    name: "Jeep SUka Nazwa",
     capacity: 4,
     price: "600.000",
     features: ["Driver", "BBM", "Guide Lokal"],
