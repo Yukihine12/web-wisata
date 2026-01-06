@@ -230,7 +230,7 @@ export default function App() {
       )}
 
       {/* FOOTER */}
-      <footer style={{textAlign: 'center', padding: '20px', background: '#e9ecef', marginTop: '40px'}}>
+      <footer style={{textAlign: 'center',  paddingTop: '0px', background: '#e9ecef', marginTop: '10px'}}>
         <p>&copy; 2025 Wisata Alam Garut. All rights reserved.</p>
       </footer>
     </>
