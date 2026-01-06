@@ -236,22 +236,87 @@ body { background-color: var(--bg); color: var(--text); -webkit-font-smoothing: 
 .submit-wa-btn:hover { background: #1ebc57; }
 
 /* --- FLOATING BUTTON --- */
+/* --- FLOATING BUTTON (ICON ANIMATION) --- */
 .floating-btn {
   position: fixed;
-  bottom: 30px; right: 30px; z-index: 1000;
-  background-color: var(--primary); color: white;
-  padding: 12px 24px; border-radius: 50px;
-  border: none; cursor: pointer;
-  font-weight: 700; font-size: 0.95rem;
+  bottom: 30px; 
+  right: 30px; 
+  z-index: 1000;
+  
+  /* Bentuk Awal: Lingkaran Sempurna */
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  
+  background-color: #25D366; /* Warna Hijau WA Asli */
+  color: white;
+  border: none;
+  cursor: pointer;
+  
+  /* Flexbox untuk menengahkan Icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: all 0.3s;
+  
+  /* Animasi Transisi Halus */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden; /* Sembunyikan teks yang panjang saat mode lingkaran */
 }
 
+/* Icon WhatsApp */
+.wa-icon {
+  flex-shrink: 0; /* Agar icon tidak gepeng */
+  transition: transform 0.3s;
+}
+
+/* Teks "Booking Sekarang" (Awalnya tersembunyi) */
+.btn-text {
+  max-width: 0;      /* Lebar 0 = hilang */
+  opacity: 0;        /* Transparan */
+  white-space: nowrap; /* Teks dilarang turun baris */
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-left: 0;
+  transition: all 0.4s ease; /* Durasi animasi muncul */
+}
+
+/* --- EFEK SAAT KURSOR MENYENTUH (HOVER) --- */
 .floating-btn:hover {
-  transform: scale(1.1) translateY(-5px);
-  background-color: var(--secondary);
+  width: 200px; /* Melebar jadi lonjong */
+  background-color: var(--primary); /* Ganti warna jadi tema web (opsional) */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  justify-content: center;
 }
 
+.floating-btn:hover .btn-text {
+  max-width: 150px;  /* Memberi ruang untuk teks */
+  opacity: 1;        /* Teks muncul */
+  margin-left: 12px; /* Jarak antara icon dan teks */
+}
+
+.floating-btn:hover .wa-icon {
+  transform: rotate(-10deg); /* Sedikit goyang iconnya biar lucu */
+}
+
+/* --- RESPONSIF HP --- */
+@media (max-width: 600px) {
+  .floating-btn {
+    bottom: 20px; 
+    right: 20px;
+    width: 50px; /* Lebih kecil di HP */
+    height: 50px;
+  }
+  
+  .floating-btn:hover {
+    width: 50px; /* DI HP JANGAN MELEBAR (Biar tidak menuhin layar) */
+  }
+  
+  .floating-btn:hover .btn-text {
+    display: none; /* Di HP teks tetap hilang, cuma icon aja */
+  }
+}
 /* --- RESPONSIF HP (WAJIB PALING BAWAH) --- */
 @media (max-width: 600px) {
   
